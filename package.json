@@ -23,7 +23,14 @@
     "test:update": "vitest -u",
     "test:coverage": "vitest --coverage",
     "luma-ui": "pnpm --filter luma-vue",
-    "major": "taze minor -wIr"
+    "major": "taze minor -wIr",
+    "serve:docs": "bash serve.sh",
+    "dev:start": "bash dev.sh",
+    "deploy": "bash deploy.sh",
+    "docker:build": "docker build -t luma-ui:latest .",
+    "docker:run": "docker run -p 3000:3000 luma-ui:latest",
+    "docker:compose": "docker-compose up -d",
+    "docker:stop": "docker-compose down"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.8",
