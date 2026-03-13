@@ -40,10 +40,10 @@ export async function evaluateUserConfig<U = UserConfig>(
         name,
         name.endsWith('.json')
           ? $fetch(CDN_BASE + name, { responseType: 'json' }).then(
-            (r: any) => ({
-              default: r,
-            }),
-          )
+              (r: any) => ({
+                default: r,
+              }),
+            )
           : _import(CDN_BASE + name),
       )
     }
@@ -53,6 +53,5 @@ export async function evaluateUserConfig<U = UserConfig>(
   const fn = new AsyncFunction('__import', code)
   const result = await fn(__import)
 
-  if (result)
-    return result
+  if (result) return result
 }

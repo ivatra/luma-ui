@@ -5,9 +5,9 @@ lang: en-US
 
 # Modal
 
-A `Modal` is a user interface element used to display content or options that require attention or interaction from the user. It is typically presented as a dialog box that appears on top of the main content, temporarily blocking interaction with the rest of the application or webpage. 
+A `Modal` is a user interface element used to display content or options that require attention or interaction from the user. It is typically presented as a dialog box that appears on top of the main content, temporarily blocking interaction with the rest of the application or webpage.
 
-The `WModal` component is created using [@headlessui/vue's](https://headlessui.com/vue/dialog) `Dialog` component. 
+The `WModal` component is created using [@headlessui/vue's](https://headlessui.com/vue/dialog) `Dialog` component.
 
 ## Basic Usage
 

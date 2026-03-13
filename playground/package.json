@@ -1,7 +1,7 @@
 {
-  "name": "@windi-ui/playground",
+  "name": "@luma-ui/playground",
   "version": "0.0.0",
-  "description": "Windi UI playground",
+  "description": "Luma UI playground",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -9,20 +9,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/selemondev/windi-ui.git"
+    "url": "git+https://github.com/ivatra/luma-ui.git"
   },
   "keywords": [
     "tailwindcss",
-    "windi-ui",
+    "luma-ui",
     "playground",
     "repl"
   ],
-  "author": "Selemondev",
+  "author": "Ivatra",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/selemondev/windi-ui/issues"
+    "url": "https://github.com/ivatra/luma-ui/issues"
   },
-  "homepage": "https://github.com/selemondev/windi-ui#readme",
+  "homepage": "https://github.com/ivatra/luma-ui#readme",
   "dependencies": {
     "@vue/repl": "^1.4.1",
     "autoprefixer": "^10.4.14",
@@ -30,7 +30,7 @@
     "ohmyfetch": "^0.4.21",
     "postcss": "^8.4.27",
     "tailwindcss": "^3.3.3",
-    "windi-vue": "workspace:0.0.1-beta.4"
+    "luma-vue": "workspace:0.0.1-beta.4"
   },
   "devDependencies": {
     "@types/prettier": "^2.7.3",

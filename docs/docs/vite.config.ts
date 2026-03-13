@@ -1,17 +1,13 @@
-import { defineConfig } from 'vite'
-import UnoCSS from 'unocss/vite'
+import { defineConfig } from "vite";
+import UnoCSS from "unocss/vite";
 export default defineConfig({
   optimizeDeps: {
-    exclude: [
-      'vitepress',
-    ],
+    exclude: ["vitepress"],
   },
   server: {
     hmr: {
       overlay: false,
     },
   },
-  plugins: [
-    UnoCSS(),
-  ],
-})
+  plugins: [UnoCSS()],
+});

@@ -8,8 +8,7 @@ const defaultConfig = ref<UserConfig | undefined>()
 async function load() {
   try {
     defaultConfig.value = await evaluateUserConfig(defaultConfigRaw)
-  }
-  catch (e) {
+  } catch (e) {
     console.error(e)
   }
 }

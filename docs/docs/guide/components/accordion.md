@@ -2,6 +2,7 @@
 title: Accordion
 lang: en-US
 ---
+
 # Accordion
 
 An Accordion displays a list of high-level options that can expand or collapse to reveal more information about a subject or item.
@@ -18,13 +19,11 @@ You can customize the background color of the accordion item when it is active b
 
 <demo src="../../components/Accordion/accordionActiveBackgroundColor.vue" />
 
-
-## Disabled 
+## Disabled
 
 The disabled attribute is used to indicate whether a `WAccordionItem` should be disabled or not. It accepts a Boolean value, where "true" means the `WAccordionItem` is disabled, and "false" means it is enabled. By default it is false.
 
 <demo src='../../components/Accordion/accordionDisabled.vue' />
-
 
 ## Icons
 
@@ -41,7 +40,6 @@ You can use the `trailing` icon by setting the `trailing` prop to `true` as show
 If you need both the `leading` and `trailing` icons, you can use the `leading` and `trailing` slot respectively as shown below:
 
 <demo src="../../components/Accordion/accordionIconSlot.vue" />
-
 
 ## Rounded
 

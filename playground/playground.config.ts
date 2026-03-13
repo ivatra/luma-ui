@@ -6,15 +6,15 @@ export interface Dependency {
   cssPath?: string
 }
 export default {
-  title: 'Windi-UI',
-  compLibName: 'Windi-ui',
-  compLibShort: 'windi',
+  title: 'Luma-UI',
+  compLibName: 'Luma-ui',
+  compLibShort: 'luma',
   versionUrl: 'https://data.jsdelivr.com/v1/package/npm/',
   vueMinVersion: '3.2.0',
   compLibMinVersion: '1.0.9',
   libDeps: {} as Record<string, Dependency>,
   coreDeps: {
-    'vue': {
+    vue: {
       pkg: '@vue/runtime-dom',
       version: 'latest',
       path: '/dist/runtime-dom.esm-browser.js',
@@ -32,23 +32,23 @@ export default {
       path: '/dist/shared.esm-bundler.js',
       source: 'jsdelivr',
     },
-    'windi-vue': {
-      pkg: 'windi-vue',
+    'luma-vue': {
+      pkg: 'luma-vue',
       version: 'latest',
-      path: '/dist/windi-vue.js',
+      path: '/dist/luma-vue.js',
       source: 'skyPack',
-      cssPath: 'windi-vue/dist/theme/windiTheme',
-    }
+      cssPath: 'luma-vue/dist/theme/lumaTheme',
+    },
   } as Record<string, Dependency>,
   cdnUrl: {
     skypack: 'https://cdn.skypack.dev/',
     jsdelivr: 'https://cdn.jsdelivr.net/npm/',
   },
   devDeps: {
-    // 'windi-vue': {
+    // 'luma-vue': {
     //   path: `${location.origin}/play/src/vue-ui-next-dev-proxy`,
     // },
-    'vue': {
+    vue: {
       path: `${location.origin}/play/src/vue-dev-proxy`,
     },
     '@vue/compiler-sfc': {

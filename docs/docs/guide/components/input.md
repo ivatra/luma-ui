@@ -63,7 +63,6 @@ You can set the icon to `leading` by just using the `icon` prop or by using the 
 
 <demo src="../../components/Input/inputIconLeading.vue" />
 
-
 ## Trailing
 
 You can set the icon to `trailing` by just using the `icon` prop and setting the `trailing` to `true` or by using the `trailing` slot as shown below:

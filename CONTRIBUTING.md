@@ -18,7 +18,7 @@ Every significant change is documented in the changelog file.
 
 ## Reporting Issues
 
-Welcome to Windi UI! We value your feedback and contributions to make this project better. If you encounter any bugs or have feature requests, please use [Github issues](https://github.com/windi-ui/windi-ui/issues) issues to submit them.
+Welcome to Luma UI! We value your feedback and contributions to make this project better. If you encounter any bugs or have feature requests, please use [Github issues](https://github.com/luma-ui/luma-ui/issues) issues to submit them.
 
 Before reporting an issue, we ask you to:
 
@@ -32,14 +32,14 @@ Your participation and attention to these guidelines will help us maintain a mor
 
 ## Sending a pull request
 
-1. Fork [the repository](https://github.com/windi-ui/windi-ui)，and create your branch from `main`. For new feature, please submit your changes directly to the `feature` branch. Other changes should go against `main` branch.
+1. Fork [the repository](https://github.com/luma-ui/luma-ui)，and create your branch from `main`. For new feature, please submit your changes directly to the `feature` branch. Other changes should go against `main` branch.
 2. Use `pnpm install` install the dependencies
 3. Use `pnpm run dev` start project, RUN `pnpm run play` start the `playground`, RUN `pnpm run docs` to write docs, usually a dev server and document server can be debugged.
 4. Make changes to the codebase. Please add `tests` if applicable.
 5. Make sure the test suite passes with `pnpm run test`.
 6. Use `pnpm run test:ci` to RUN `CI` tests before you commit your code.
-8. Commit your changes, adhering to the [Commit Guidelines](#commit-guidelines).
-9. Open a new pull request, [referencing corresponding issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) if available.
+7. Commit your changes, adhering to the [Commit Guidelines](#commit-guidelines).
+8. Open a new pull request, [referencing corresponding issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) if available.
 
 ## Commit Guidelines
 
@@ -69,7 +69,7 @@ The following is a list of commit types:
   - Fixed misalignment in the button component.
   - Resolved an issue with the modal not closing correctly.
 
-- `docs`: Commits related to documentation changes for Windi UI components. Examples:
+- `docs`: Commits related to documentation changes for Luma UI components. Examples:
   - Updated usage examples in the README for the carousel component.
   - Added API documentation for the accordion component.
 
@@ -85,7 +85,7 @@ The following is a list of commit types:
   - Optimized rendering logic in the data table component.
   - Reduced the size of assets for faster loading times.
 
-- `test`: Commits related to testing Windi UI components. Examples:
+- `test`: Commits related to testing Luma UI components. Examples:
   - Added unit tests for the accordion component to ensure functionality.
   - Fixed failing test cases for the dropdown menu.
 
@@ -93,13 +93,12 @@ The following is a list of commit types:
   - Updated third-party dependencies in package.json.
   - Ignored build output in .gitignore.
 
-
-## Windi UI Repository Structure
+## Luma UI Repository Structure
 
 This repository is managed by `pnpm` and includes the following packages：
 
-1. `windi-ui`: Main UI component library for Vue
-2. `nuxt-windi-ui`: Main nuxt module for Windi UI
+1. `luma-ui`: Main UI component library for Vue
+2. `nuxt-luma-ui`: Main nuxt module for Luma UI
 3. `docs`: Component documentation site
 4. `example`: Example of debugging a UI component
 5. `playground`: UI component playground

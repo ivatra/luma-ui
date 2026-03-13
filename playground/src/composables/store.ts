@@ -36,7 +36,10 @@ export type SerializeState = Record<string, string> & {
 export const useStore = (initial: Initial) => {
   // 版本
   const versions = reactive(
-    initial.versions || { vue: 'latest', [playConfig.compLibShort]: IS_DEV ? `@${__COMMIT__}` : 'latest' },
+    initial.versions || {
+      vue: 'latest',
+      [playConfig.compLibShort]: IS_DEV ? `@${__COMMIT__}` : 'latest',
+    },
   )
   // 编译器
   const compiler = shallowRef<typeof defaultCompiler>()
@@ -75,13 +78,11 @@ export const useStore = (initial: Initial) => {
   // 用户写入 import_map.json 的依赖
   const userImportMap = computed<ImportMap>(() => {
     const code = state.files[USER_IMPORT_MAP]?.code.trim()
-    if (!code)
-      return {}
+    if (!code) return {}
     let map: ImportMap = {}
     try {
       map = JSON.parse(code)
-    }
-    catch (err) {
+    } catch (err) {
       console.error(err)
     }
     return map
@@ -160,13 +161,11 @@ export const useStore = (initial: Initial) => {
     if (serializedState) {
       const saved = deserialize(serializedState)
       for (const [filename, file] of Object.entries(saved)) {
-        if (filename === '_o')
-          continue
+        if (filename === '_o') continue
         files[filename] = new File(filename, file as string)
       }
       userOptions.value = saved._o || {}
-    }
-    else {
+    } else {
       files[APP_FILE] = new File(APP_FILE, welcomeCode)
     }
     files[MAIN_FILE] = new File(MAIN_FILE, mainCode, hideFile.value)
@@ -187,16 +186,15 @@ export const useStore = (initial: Initial) => {
         hidden: boolean
         code: string
       }
-      if (fileInfo.hidden)
-        continue
+      if (fileInfo.hidden) continue
       exported[fileInfo.filename] = fileInfo.code
     }
     return exported
   }
 
   function addFile(fileOrFilename: string | File) {
-    const file
-      = typeof fileOrFilename === 'string'
+    const file =
+      typeof fileOrFilename === 'string'
         ? new File(fileOrFilename)
         : fileOrFilename
     state.files[file.filename] = file
@@ -204,12 +202,10 @@ export const useStore = (initial: Initial) => {
   }
 
   function deleteFile(filename: string) {
-    if (filename === LIB_INSTALL)
-      return
+    if (filename === LIB_INSTALL) return
 
     if (confirm(`Are you sure you want to delete ${filename}?`)) {
-      if (state.activeFile.filename === filename)
-        setActive(APP_FILE)
+      if (state.activeFile.filename === filename) setActive(APP_FILE)
 
       delete state.files[filename]
     }
@@ -217,8 +213,7 @@ export const useStore = (initial: Initial) => {
 
   function setActive(filename: string) {
     const file = state.files[filename]
-    if (file.hidden)
-      return
+    if (file.hidden) return
     state.activeFile = state.files[filename]
   }
 

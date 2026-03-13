@@ -1,1 +1,1 @@
-module.exports = require('@windi-ui/tailwind-config/postcss.config')
+module.exports = require("@luma-ui/tailwind-config/postcss.config");

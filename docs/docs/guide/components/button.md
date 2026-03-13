@@ -49,7 +49,6 @@ You can set the `size` of the button by using the `size` prop as shown below:
 
 By default, the size of the button is `md`.
 
-
 ## Disabled
 
 You can use the `disabled` prop to determine whether a button is disabled or not as shown below:
@@ -78,7 +77,6 @@ You can set the icon to `leading` by just using the `icon` prop or by using the 
 
 <demo src="../../components/Button/buttonIconLeading.vue" />
 
-
 ### Trailing
 
 You can set the icon to `trailing` by either setting the `trailing` prop to `true` or by using the `trailing` slot as shown below:
@@ -100,7 +98,6 @@ You can use `icon` only by not passing a text to the `label` prop as shown below
 You can use the `full` prop to make the `WButton` fill the width of its container as shown below:
 
 <demo src="../../components/Button/buttonFull.vue" />
-
 
 ## Link
 
@@ -285,7 +282,7 @@ By default, the `vertical` prop is set to `false`.
       },
     },
   },
-  
+
   WButtonGroup: {
     base: {
       root: 'flex [&>:not(:first-child):not(:last-child)]:rounded-none',

@@ -1,8 +1,8 @@
 # Theme
 
-Windi UI supports both light and dark theme out of the box with no configuration needed from the developer's end.
+Luma UI supports both light and dark theme out of the box with no configuration needed from the developer's end.
 
-In regards to customization, Windi UI offers two ways of customizing your components.
+In regards to customization, Luma UI offers two ways of customizing your components.
 The first way is through the `variants` property and the second way is by creating your own theme file.
 
 ## Inline Variants
@@ -31,8 +31,7 @@ Below are examples of both the `styled` and `unstyled` versions of the `WButton`
 
 ## Theme creation
 
-
-Windi UI leverages the power of Tailwind CSS as its default classes provider. 
+Luma UI leverages the power of Tailwind CSS as its default classes provider.
 
 However, since we value flexibility and understand that different projects have unique requirements, you have the freedom to use your own custom classes or opt for an alternative utility classes provider, allowing you to tailor the UI library to your specific needs and preferences.
 
@@ -45,7 +44,6 @@ Let's explore an example of how you can create your own theme and use it in your
 3. Start creating your themes based on the component's presets.
 
 - Let's explore an example showcasing the versatility of the `WButton` preset:
-
 
 ```ts
   WButton: {
@@ -217,10 +215,10 @@ Let's explore an example of how you can create your own theme and use it in your
 
 The `Base` serves as the foundation, containing entries for all the essential components of the element. It applies permanent classes to each major part, ensuring consistent styling throughout.
 
-The `Variants` section includes entries for every variant of the component. By default, the `Default` variant is automatically applied if no specific variant is selected. 
+The `Variants` section includes entries for every variant of the component. By default, the `Default` variant is automatically applied if no specific variant is selected.
 
 You can create your own theme by modifying the classes of the initial theme or by adding your own custom classes.
 
 :::tip
-When Windi UI v0.0.5 is released, developers will have access to a theme generator that will simplify the process of creating themes to match their preferred styles.
+When Luma UI v0.0.5 is released, developers will have access to a theme generator that will simplify the process of creating themes to match their preferred styles.
 :::

@@ -5,29 +5,24 @@ import type { ReplStore } from '~/composables/store'
 export const formatCode = async (loadedFormat: boolean, store: ReplStore) => {
   let close: Fn | undefined
 
-  const [format, parserHtml, parserTypeScript, parserBabel, parserPostcss]
-    = await Promise.all([
-      import('prettier/standalone').then(r => r.format),
-      import('prettier/parser-html').then(m => m.default),
-      import('prettier/parser-typescript').then(m => m.default),
-      import('prettier/parser-babel').then(m => m.default),
-      import('prettier/parser-postcss').then(m => m.default),
+  const [format, parserHtml, parserTypeScript, parserBabel, parserPostcss] =
+    await Promise.all([
+      import('prettier/standalone').then((r) => r.format),
+      import('prettier/parser-html').then((m) => m.default),
+      import('prettier/parser-typescript').then((m) => m.default),
+      import('prettier/parser-babel').then((m) => m.default),
+      import('prettier/parser-postcss').then((m) => m.default),
     ])
   loadedFormat = true
   close?.()
   // 判断文件类型
   const file = store.state.activeFile
   let parser: BuiltInParserName
-  if (file.filename.endsWith('.vue'))
-    parser = 'vue'
-  else if (file.filename.endsWith('.js'))
-    parser = 'babel'
-  else if (file.filename.endsWith('.ts'))
-    parser = 'typescript'
-  else if (file.filename.endsWith('.json'))
-    parser = 'json'
-  else
-    return
+  if (file.filename.endsWith('.vue')) parser = 'vue'
+  else if (file.filename.endsWith('.js')) parser = 'babel'
+  else if (file.filename.endsWith('.ts')) parser = 'typescript'
+  else if (file.filename.endsWith('.json')) parser = 'json'
+  else return
 
   // 调用格式化方法
   file.code = format(file.code, {

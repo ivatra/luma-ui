@@ -23,7 +23,6 @@ The `WAlert` component comes with 5 different variants such as `default`, `prima
 
 <demo src="../../components/Alert/alertVariants.vue" />
 
-
 ## Theme
 
 The `WAlert` component comes with various themes such as `light`, `outline` and `dashed` as demonstrated below:
@@ -33,7 +32,6 @@ The `WAlert` component comes with various themes such as `light`, `outline` and 
 You can set the `light` theme to the variants as shown below:
 
 <demo src="../../components/Alert/alertThemesLight.vue" />
-
 
 ### Outline
 
@@ -47,7 +45,6 @@ You can set the `dashed` theme to the variants as shown below:
 
 <demo src="../../components/Alert/alertThemeDashed.vue" />
 
-
 ## Closable
 
 You can set the `closable` prop and an event to close the alert as shown below:
@@ -56,17 +53,15 @@ You can set the `closable` prop and an event to close the alert as shown below:
 
 In the example above, the `WAlert` component has a `closable` prop, which allows you to display a close button on the `WAlert` component . When the close button is clicked, it emits a close event. You can handle this event by defining your own method inorder to close the `WAlert` component.
 
-
 ## Transitions
 
 You can set the transition of the `WAlert` component when it is dismissed as shown below:
 
 <demo src="../../components/Alert/alertTransition.vue" />
 
-Windi UI offers four transition modes as of Windi UI version `v0.0.1`, namely: `slideRight`, `slideLeft`, `fade`, and `scale`.
+Luma UI offers four transition modes as of Luma UI version `v0.0.1`, namely: `slideRight`, `slideLeft`, `fade`, and `scale`.
 
 By default, the `WAlert` component's transition is `slideRight`.
-
 
 ## Icons
 
@@ -86,8 +81,7 @@ If you need both the leading and trailing icons, you can use the leading and tra
 
 <demo src="../../components/Alert/alertIconSlot.vue" />
 
-
-## Avatar 
+## Avatar
 
 You can use the `WAvatar` component with the `WAlert` component as shown below:
 
@@ -232,7 +226,5 @@ You can also create a custom alert component as demonstrated below:
       },
     },
   },
-  
+
 ```
-
-

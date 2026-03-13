@@ -14,8 +14,8 @@
     "jsx": "preserve",
     "types": ["node", "vite/client"],
     "paths": {
-      "windi-ui": ["./packages/windi-ui/src/index.ts"],
-      "@windi-ui/docs": ["./docs/*"]
+      "luma-ui": ["./packages/luma-ui/src/index.ts"],
+      "@luma-ui/docs": ["./docs/*"]
     }
   },
   "references": [

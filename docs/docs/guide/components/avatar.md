@@ -21,15 +21,11 @@ You can use `size` prop to change the size of the Avatar.
 
 By defaut, the `WAvatar` size is set to `md`.
 
-
 ## Chip
-
 
 To display a chip on the `WAvatar` component , utilize the `chip-color`, `chip-text`, and `chip-position` props as shown below:
 
-
 <demo src="../../components/Avatar/avatarChip.vue" />
-
 
 ## Icon
 
@@ -47,13 +43,11 @@ If the `name` prop is provided, the fallback will be defaulted to be the first l
 
 <demo src="../../components/Avatar/avatarName.vue"/>
 
-
 ## Initials
 
 If you prefer to use initials, you can pass the initials to the `initials` prop as shown below and it will act as a fallback in the scenario where the image url is not provided:
 
 <demo src="../../components/Avatar/avatarInitials.vue"/>
-
 
 ## Group
 
@@ -66,7 +60,6 @@ To stack avatars as a group, you can use the `WAvatarGroup` component as shown b
 You can use the `max` prop to limit avatars shown, displaying "+X" for remaining avatars and the `size` prop to size all the avatars equally as shown below:
 
 <demo src="../../components/Avatar/avatarGroupMax.vue"/>
-
 
 ## Preset
 
@@ -137,4 +130,3 @@ You can use the `max` prop to limit avatars shown, displaying "+X" for remaining
   },
 
 ```
-

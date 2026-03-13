@@ -1,16 +1,15 @@
-# Windi UI playground
+# Luma UI playground
 
-![site-screenshot](./public/windi-ui-playground.png)
+![site-screenshot](./public/luma-ui-playground.png)
 
 ## 🚧 WIP
 
-The Windi UI playground is in active development at the moment.
-
+The Luma UI playground is in active development at the moment.
 
 ## Comes with:
 
 - Vue 3 latest version 🔥
-- Options API and Setup API 🛠️ 
+- Options API and Setup API 🛠️
 - TypeScript 🦾
 - Prettier 🌸
-- Windi UI On Demand Import ⚙️
+- Luma UI On Demand Import ⚙️

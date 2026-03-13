@@ -23,7 +23,7 @@ A badge can be used to display a number or string. If the `value` is greater tha
 
 <demo src="../../components/Badge/badgeValue.vue" />
 
-## Square 
+## Square
 
 The badge can also be displayed as a square by using the `square` prop as shown below:
 

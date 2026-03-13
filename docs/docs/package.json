@@ -1,10 +1,10 @@
 {
-  "name": "@windi-ui/docs",
+  "name": "@luma-ui/docs",
   "version": "0.0.0",
   "private": true,
-  "description": "Windi-UI docs",
+  "description": "Luma-UI docs",
   "keywords": [
-    "windi-ui",
+    "luma-ui",
     "docs"
   ],
   "scripts": {
@@ -13,7 +13,7 @@
     "serve": "vitepress serve"
   },
   "dependencies": {
-    "windi-vue": "workspace:^",
+    "luma-vue": "workspace:^",
     "markdown-it": "^13.0.1"
   },
   "devDependencies": {

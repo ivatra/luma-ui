@@ -1,15 +1,14 @@
 import { getCurrentInstance } from 'vue'
-import install from 'windi-vue'
-import windiTheme from 'windi-vue/dist/theme/windiTheme'
+import install from 'luma-vue'
+import lumaTheme from 'luma-vue/dist/theme/lumaTheme'
 
 let installed = false
 
 export function libInstall() {
-  if (installed)
-    return
+  if (installed) return
   const instance = getCurrentInstance()
-  
-  instance.appContext.app.use(install, windiTheme)
+
+  instance.appContext.app.use(install, lumaTheme)
   installed = true
 }
 
@@ -40,17 +39,14 @@ export function createInjectUnocss() {
   })
 }
 
-
 export function sendHtml() {
   const div = document.querySelector('#app').innerHTML
   top.postMessage(div, location.ancestorOrigins[0])
 }
 
-
 export function getUnocssCompileRes() {
   window.addEventListener('message', (event) => {
     const styleElm = document.querySelector('#unocss_style')
-    if (styleElm)
-      styleElm.innerHTML = event.data
+    if (styleElm) styleElm.innerHTML = event.data
   })
 }

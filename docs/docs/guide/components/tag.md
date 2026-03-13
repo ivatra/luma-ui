@@ -165,4 +165,3 @@ You can set the `closable` prop and an event to remove the `WTag` component as s
     },
   },
 ```
-

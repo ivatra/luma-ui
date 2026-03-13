@@ -1,26 +1,26 @@
-import { defineConfig } from 'vitepress'
-import { version } from '../../../package.json'
-import { applyPlugins } from './plugins/code'
+import { defineConfig } from "vitepress";
+import { version } from "../../../package.json";
+import { applyPlugins } from "./plugins/code";
 
 const components = [
-  { text: 'Accordion', link: '/guide/components/accordion.md' },
-  { text: 'Alert', link: '/guide/components/alert.md' },
-  { text: 'Avatar', link: '/guide/components/avatar.md'},
-  { text: 'Badge', link: '/guide/components/badge.md'},
-  { text: 'Button', link: '/guide/components/button.md'},
-  { text: 'Checkbox', link: '/guide/components/checkbox.md'},
-  { text: 'Divider', link: '/guide/components/divider.md'},
-  { text: 'Icon', link: '/guide/components/icon.md'},
-  { text: 'Input', link: '/guide/components/input.md'},
-  { text: 'Kbd', link: '/guide/components/kbd.md'},
-  { text: 'Modal', link: '/guide/components/modal.md'},
-  { text: 'Switch', link: '/guide/components/switch.md'},
-  { text: 'Tag', link: '/guide/components/tag.md'},
-]
+  { text: "Accordion", link: "/guide/components/accordion.md" },
+  { text: "Alert", link: "/guide/components/alert.md" },
+  { text: "Avatar", link: "/guide/components/avatar.md" },
+  { text: "Badge", link: "/guide/components/badge.md" },
+  { text: "Button", link: "/guide/components/button.md" },
+  { text: "Checkbox", link: "/guide/components/checkbox.md" },
+  { text: "Divider", link: "/guide/components/divider.md" },
+  { text: "Icon", link: "/guide/components/icon.md" },
+  { text: "Input", link: "/guide/components/input.md" },
+  { text: "Kbd", link: "/guide/components/kbd.md" },
+  { text: "Modal", link: "/guide/components/modal.md" },
+  { text: "Switch", link: "/guide/components/switch.md" },
+  { text: "Tag", link: "/guide/components/tag.md" },
+];
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   vite: { plugins: [] },
-  title: "Windi UI",
+  title: "Luma UI",
   description: "Build Accessible Apps 10x faster",
   head: [
     [
@@ -28,75 +28,86 @@ export default defineConfig({
       {
         rel: "icon",
         type: "image/svg+xml",
-        href: "/windi.png",
+        href: "/luma.png",
       },
     ],
     ["meta", { property: "og:type", content: "website" }],
     [
-      'link',
-      { href: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap', rel: 'stylesheet' }
-    ]
+      "link",
+      {
+        href: "https://fonts.googleapis.com/css2?family=Roboto&display=swap",
+        rel: "stylesheet",
+      },
+    ],
   ],
   themeConfig: {
     search: {
-      provider: 'algolia',
+      provider: "algolia",
       options: {
-        appId: 'J80WVGDCRV',
-        apiKey: 'ca4b17a48a4b73178c772c805c02a211',
-        indexName: 'ui-windi'
-      }
+        appId: "J80WVGDCRV",
+        apiKey: "ca4b17a48a4b73178c772c805c02a211",
+        indexName: "ui-luma",
+      },
     },
-    logo: '../windi.png',
+    logo: "../luma.png",
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Guide', items: [
-        { text: 'Introduction', link: '/guide/getting-started/index.md' },
-        { text: 'Installation', link: '/guide/getting-started/installation.md' },
-        { text: 'Theme', link: '/guide/getting-started/theme.md' }
-      ] },
-      { text: 'Components', items: components },
-      { text: 'UI', link: '/guide/windi-ui/index.md' },
-      { text: 'Playground', link: '/guide/playground/index.md' },
+      {
+        text: "Guide",
+        items: [
+          { text: "Introduction", link: "/guide/getting-started/index.md" },
+          {
+            text: "Installation",
+            link: "/guide/getting-started/installation.md",
+          },
+          { text: "Theme", link: "/guide/getting-started/theme.md" },
+        ],
+      },
+      { text: "Components", items: components },
+      { text: "UI", link: "/guide/luma-ui/index.md" },
+      { text: "Playground", link: "/guide/playground/index.md" },
       // { text: "Showcase", link: '' },
-      { text: `v${version}`, link: ''},
-
+      { text: `v${version}`, link: "" },
     ],
 
     sidebar: {
-      '/guide/': [
+      "/guide/": [
         {
-          text: '✨&nbsp;&nbsp; Getting Started',
+          text: "✨&nbsp;&nbsp; Getting Started",
           collapsed: true,
           items: [
-            { text: 'Introduction', link: '/guide/getting-started/index.md' },
-            { text: 'Installation', link: '/guide/getting-started/installation.md' },
-            { text: 'Theme', link: '/guide/getting-started/theme.md' }
-          ]
+            { text: "Introduction", link: "/guide/getting-started/index.md" },
+            {
+              text: "Installation",
+              link: "/guide/getting-started/installation.md",
+            },
+            { text: "Theme", link: "/guide/getting-started/theme.md" },
+          ],
         },
 
         {
           text: "📦&nbsp;&nbsp; Components",
           collapsed: true,
-          items: components
-        }
+          items: components,
+        },
       ],
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/selemondev/windi-ui' }
+      { icon: "github", link: "https://github.com/ivatra/luma-ui" },
     ],
     footer: {
-      message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2023-PRESENT Selemon Brahanu',
+      message: "Released under the MIT License.",
+      copyright: "Copyright © 2023-PRESENT Dmitry Ivatra",
     },
   },
   markdown: {
     config: (md) => {
-      applyPlugins(md)
+      applyPlugins(md);
     },
     theme: {
-      light: 'vitesse-light',
-      dark: 'vitesse-dark',
+      light: "vitesse-light",
+      dark: "vitesse-dark",
     },
   },
-})
+});

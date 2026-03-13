@@ -1,7 +1,7 @@
 <template>
-    <div>
-      <div class="flex space-x-3">
-        <WAvatar name="Selemon" />
-      </div>
+  <div>
+    <div class="flex space-x-3">
+      <WAvatar name="Dmitry" />
     </div>
-  </template>
+  </div>
+</template>

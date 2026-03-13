@@ -79,14 +79,14 @@ async function copyLink() {
         h-30px
       > -->
       <span text-lg font-bold dark-text-gray-100>{{ playConfig.title }}</span>
-      <div ml-12px dark-text-gray-300>
-        Playground
-      </div>
+      <div ml-12px dark-text-gray-300>Playground</div>
     </a>
 
     <div flex items-center m-2>
       <div v-for="(v, key) of versions" :key="key" flex items-center>
-        <span dark-text-gray-300 font-bold text-base>{{ v.text }} Version:</span>
+        <span dark-text-gray-300 font-bold text-base
+          >{{ v.text }} Version:</span
+        >
         <o-popup
           position="bottom"
           :content-style="{ paddingLeft: 0, paddingRight: 0 }"
@@ -157,22 +157,8 @@ async function copyLink() {
       </a>
 
       <a class="header-a" cursor-pointer @click.prevent="toggleTheme()">
-        <o-icon
-          v-if="appDark"
-          h-5
-          w-5
-          mx-4
-          o="gray"
-          name="i-carbon-moon"
-        />
-        <o-icon
-          v-else
-          h-5
-          w-5
-          mx-4
-          o="gray"
-          name="i-carbon-sun"
-        />
+        <o-icon v-if="appDark" h-5 w-5 mx-4 o="gray" name="i-carbon-moon" />
+        <o-icon v-else h-5 w-5 mx-4 o="gray" name="i-carbon-sun" />
       </a>
 
       <a class="header-a" cursor-pointer @click.prevent="copyLink">

@@ -11,17 +11,16 @@ export const getVersions = (pkg: MaybeRef<string>) => {
   const url = computed(() => `${playConfig.versionUrl}${unref(pkg)}`)
   return useFetch(url, {
     initialData: [],
-    afterFetch: ctx => ((ctx.data = ctx.data.versions), ctx),
+    afterFetch: (ctx) => ((ctx.data = ctx.data.versions), ctx),
     refetch: true,
   }).json<string[]>().data as Ref<string[]>
 }
-
 
 export const getSupportVersions = (pkg: string, minVersion: string) => {
   const versions = getVersions(pkg)
   const IS_VUE = pkg === 'vue'
   return computed(() => {
-    const canUserVersions = versions.value.filter(version =>
+    const canUserVersions = versions.value.filter((version) =>
       compare(version, minVersion, '>='),
     )
     if (canUserVersions.length > 0) {
@@ -33,14 +32,12 @@ export const getSupportVersions = (pkg: string, minVersion: string) => {
   })
 }
 
-
 export async function setVueVersion(
   version: string,
   compiler: ShallowRef<typeof import('vue/compiler-sfc') | undefined>,
   state: { vueRuntimeURL: string },
   versions: Versions,
 ) {
-
   const { compilerSfc, runtimeDom } = genVueLink(version)
 
   compiler.value = await import(/* @vite-ignore */ compilerSfc)
@@ -50,7 +47,6 @@ export async function setVueVersion(
   // eslint-disable-next-line no-console
   console.info(`[@vue/repl] Now using Vue version: ${version}`)
 }
-
 
 export async function setVersion(
   key: VersionKey,

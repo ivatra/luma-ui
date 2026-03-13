@@ -13,7 +13,12 @@
       <WBadge chip position="top-right" variant="danger">
         <WButton label="Danger" variant="danger" />
       </WBadge>
-      <WBadge :value="150" :max-value="100" position="top-right" variant="success">
+      <WBadge
+        :value="150"
+        :max-value="100"
+        position="top-right"
+        variant="success"
+      >
         <WIcon name="mdi:bell" size="3xl" class="dark:text-white" />
       </WBadge>
       <WBadge :value="10" position="top-right" variant="primary">

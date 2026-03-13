@@ -3,18 +3,18 @@
 layout: home
 
 hero:
-  name: "Windi UI"
+  name: "Luma UI"
   text: "Build Accessible Apps 10x faster"
-  tagline: Beautiful and professionally crafted Windi UI components and templates.
+  tagline: Beautiful and professionally crafted Luma UI components and templates.
   image:
-    - src: ''
+    - src: ""
   actions:
     - theme: brand
       text: Get Started
       link: /guide/getting-started/#introduction
     - theme: alt
-      text: Why Windi?
-      link: /guide/getting-started/#why-windi-ui
+      text: Why Luma?
+      link: /guide/getting-started/#why-luma-ui
     - theme: alt
       text: View Components
       link: /guide/components/accordion.html
@@ -30,7 +30,7 @@ features:
     link: "#"
   - icon: 🛠️
     title: On Demand Import
-    details: Windi UI comes with an intelligent resolver that automatically imports only used components.
+    details: Luma UI comes with an intelligent resolver that automatically imports only used components.
     link: "#"
   - icon: 📦
     title: Diverse Component Selection
@@ -38,7 +38,7 @@ features:
     link: "#"
   - icon: ⚡️
     title: Powerful Tools
-    details: Windi UI is built on top of powerful tools such as TailwindCss, VueUse, Headless UI etc.
+    details: Luma UI is built on top of powerful tools such as TailwindCss, VueUse, Headless UI etc.
     link: "#"
   - icon: 🎨
     title: Themeable

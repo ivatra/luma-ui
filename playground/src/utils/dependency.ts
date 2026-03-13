@@ -13,17 +13,14 @@ export const genCDNLink = (
 ) => {
   //@ts-ignore
   if (IS_DEV && (version === `@${__COMMIT__}` || /vue/.test(pkg))) {
-    if (pkg === '@vue/runtime-dom')
-      pkg = 'vue'
+    if (pkg === '@vue/runtime-dom') pkg = 'vue'
 
     return playConfig.devDeps[pkg]?.path
-  }
-  else {
+  } else {
     version = version ? `@${version}` : ''
   }
   return `${cdnUrl}${pkg}${version}${path}`
 }
-
 
 export const genVueLink = (version: string) => {
   const compilerSfc = genCDNLink(
@@ -44,22 +41,18 @@ export const genVueLink = (version: string) => {
   }
 }
 
-
 export const genImportMap = ({
   vue,
   [playConfig.compLibShort]: lib,
 }: Partial<Versions> = {}): ImportMap => {
-
   const deps: Record<string, Dependency> = {
     ...playConfig.coreDeps,
   }
 
   Object.keys(deps).forEach((key: string) => {
-    if (/vue/.test(key))
-      deps[key].version = vue
+    if (/vue/.test(key)) deps[key].version = vue
 
-    if (key.includes(playConfig.compLibShort))
-      deps[key].version = lib
+    if (key.includes(playConfig.compLibShort)) deps[key].version = lib
   })
 
   return {

@@ -1,8 +1,8 @@
-import { resolve } from 'node:path'
-import { defineConfig } from 'vitest/config'
-import Vue from '@vitejs/plugin-vue'
+import { resolve } from "node:path";
+import { defineConfig } from "vitest/config";
+import Vue from "@vitejs/plugin-vue";
 
-const r = (p: string) => resolve(__dirname, p)
+const r = (p: string) => resolve(__dirname, p);
 export default defineConfig({
   plugins: [Vue()],
   optimizeDeps: {
@@ -10,14 +10,14 @@ export default defineConfig({
   },
   test: {
     clearMocks: true,
-    environment: 'jsdom',
+    environment: "jsdom",
     transformMode: {
       web: [/\.[jt]sx$/],
     },
   },
   resolve: {
     alias: {
-      'windi-ui': r('./packages/windi'),
+      "luma-ui": r("./packages/luma"),
     },
   },
-})
+});
