@@ -1,7 +1,5 @@
 <p align="center">
-<img src="./docs/docs/public/luma.svg" style="width:100px;" />
 <h1 align="center">Luma UI 🚧</h1>
-<p align="center">Build Accessible Apps 10x faster.</p>
 </p>
 
 ## Features
