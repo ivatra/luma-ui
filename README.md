@@ -1,6 +1,5 @@
-<p align="center">
-<h1 align="center">Luma UI 🚧</h1>
-</p>
+<h1 align="center">Luma UI</h1>
+<p/>
 
 ## Features
 
