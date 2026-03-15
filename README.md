@@ -1,6 +1,3 @@
-<h1 align="center">Luma UI</h1>
-<p/>
-
 ## Features
 
 - 🦾 **TypeScript Support** - Built with TypeScript in mind and from the ground up.
@@ -194,7 +191,3 @@ The error should now be resolved.
 This issue is set to be fixed in the next release of **Luma UI v0.0.1 Alpha**
 
 🥳 Well done, you can now go ahead and build your web application with ease.
-
-## License
-
-[MIT](./LICENSE) License © 2023 [ivatra](https://github.com/ivatra)
