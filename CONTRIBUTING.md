@@ -103,6 +103,3 @@ This repository is managed by `pnpm` and includes the following packages：
 4. `example`: Example of debugging a UI component
 5. `playground`: UI component playground
 
-## License
-
-By contributing your code to the repository, you agree to license your contribution under the [MIT license](./LICENSE).
